@@ -1,0 +1,68 @@
+{
+    "name":"Webdis",
+    "type":"WebSocket Client",
+    "path":"Software",
+    "version":"1.0.0",
+    "description":"WebSocket client for Webdis, a Redis HTTP interface.",
+    "url":"",
+    "downloadURL":"",
+    "hasInput":true,
+    "hasOutput":true,
+    "hideDefaultCommands":true,
+    "hideDefaultParameters":[
+        "autoAdd"
+    ],
+    "defaults":{
+        "serverPath":"127.0.0.1:7379",
+        "autoAdd":false
+    },
+    "parameters":{},
+    "values":{},
+    "scripts":[
+        "Webdis.js"
+    ],
+    "commands":{
+        "Publish string":{
+            "menu":"",
+            "callback":"publishJSON",
+            "parameters":{
+                "key":{
+                    "type":"String"
+                },
+                "message":{
+                    "type":"String"
+                }
+            }
+        },
+        "Publish float":{
+            "menu":"",
+            "callback":"publishJSON",
+            "parameters":{
+                "key":{
+                    "type":"String"
+                },
+                "message":{
+                    "type":"Float"
+                }
+            }
+        },
+        "Subscribe":{
+            "menu":"",
+            "callback":"subscribe",
+            "parameters":{
+                "key":{
+                    "type":"String"
+                }
+            }
+        },
+        "Unsubscribe":{
+            "menu":"",
+            "callback":"unsubscribe",
+            "parameters":{
+                "key":{
+                    "type":"String"
+                }
+            }
+        }
+    }
+}
