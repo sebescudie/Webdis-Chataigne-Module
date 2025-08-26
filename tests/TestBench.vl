@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="GkNn9BF8u76Ndt62dEM7DH" LanguageVersion="2025.7.0-0561-gd1e89f36f0" Version="0.128">
+<Document xmlns:p="property" xmlns:r="reflection" Id="UYo6YNIfUVAMzXGni7sCea" LanguageVersion="2025.7.0-0561-gd1e89f36f0" Version="0.128">
   <NugetDependency Id="TUUoizixnxXOAePd7iFjXB" Location="VL.CoreLib" Version="2025.7.0-0561-gd1e89f36f0" />
   <Patch Id="SJoXEXsq3y4PgBDpxgif1G">
     <Canvas Id="PrnuON1kM55LpIbegsUc3p" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
@@ -190,6 +190,51 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
+          <Node Bounds="762,479,60,19" Id="Jh5atb4m6VcQQDMWKWzZCJ">
+            <p:NodeReference LastCategoryFullName="IO.Redis" LastDependency="VL.IO.Redis.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Redis" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="Subscribe" />
+            </p:NodeReference>
+            <Pin Id="KKJ2Jd68SGtQW2G2chDB4C" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="M7VIPNpTdfyLHktLb7uwJJ" Name="Client" Kind="InputPin" />
+            <Pin Id="M3DuJAqPRKzMVwcPb0OuFu" Name="Channel" Kind="InputPin" />
+            <Pin Id="INM4TTX8Zk3PqoYace22f1" Name="Serialization Format" Kind="InputPin" />
+            <Pin Id="HgYdVk6KYJlOLNbfEWrfm6" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="762,520,65,19" Id="BTYnmBsWAeUL3QA9DLpdrz">
+            <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
+            </p:NodeReference>
+            <Pin Id="M0zEYEbYiuwOILLbnfXPgA" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="AXjounHdE2DLM7pZW9skaO" Name="Initial Result" Kind="InputPin" IsHidden="true" />
+            <Pin Id="T1SgOAiArc1OHPpS2DMtSY" Name="Async Notifications" Kind="InputPin" />
+            <Pin Id="H90KxhlTvj5LqWHcOHp795" Name="Reset" Kind="InputPin" />
+            <Pin Id="UTUNt1NamvuP0cP6fIfNMZ" Name="Output" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="TBWDbV9DwRWLjKWV1qBm7f" Name="Value" Kind="OutputPin" />
+            <Pin Id="OHVPldPF2zrLsc5SP22Fce" Name="On Data" Kind="OutputPin" />
+          </Node>
+          <Pad Id="AMKZa5Bjs0qNfhf2werFQA" Comment="Channel" Bounds="792,429,88,15" ShowValueBox="true" isIOBox="true" Value="important">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="FtXfbVYKYMrPIrh1yTEpjf" Comment="Serialization Format" Bounds="819,449,89,15" ShowValueBox="true" isIOBox="true" Value="Json">
+            <p:TypeAnnotation LastCategoryFullName="IO.Redis" LastDependency="VL.IO.Redis.vl">
+              <Choice Kind="TypeFlag" Name="SerializationFormat" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="NYz9kqq1X4iQI7ALBnxm5b" Comment="" Bounds="764,581,123,15" ShowValueBox="true" isIOBox="true" Value="text">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="PmEGXr4z5hlPrQi8soUvcl" Comment="On Data" Bounds="824,560,35,15" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="FubfL31IaOHPKe3A6ZnOIb" Name="Create" />
         <Patch Id="RJIaWAuDAlEMKzlo0YbzAU" Name="Update" />
@@ -214,6 +259,12 @@
         <Link Id="QQqaLxFCogCNeb2XJeE1Nz" Ids="Dyckco8mUN6LzRiKbtm7GW,EJu1dAFWbCDN6bAytZKVTP" />
         <Link Id="RQzqkEuXa2pO3sZKAwoYmZ" Ids="VyKoHY7OacXPvGgjlYCrku,MQsZmX8Ho1jONXBCXIfuFd" />
         <Link Id="EoCh3i1A4MsN0ITFNs5ojt" Ids="IIr6L0Vi5kqLylWNAvAsNt,Pt7biJK3wTmPGiVBS3Qe0a" />
+        <Link Id="KGt1CaODwpPMho9ljr3gaP" Ids="S7LPsiBYypCP6jLtk510Z4,M7VIPNpTdfyLHktLb7uwJJ" />
+        <Link Id="PkODSWTs6iZN3BEEZiqfSS" Ids="HgYdVk6KYJlOLNbfEWrfm6,T1SgOAiArc1OHPpS2DMtSY" />
+        <Link Id="N6jX3djneRZNOZ4JbHatky" Ids="AMKZa5Bjs0qNfhf2werFQA,M3DuJAqPRKzMVwcPb0OuFu" />
+        <Link Id="UmEi6A1NZSZNNXefCtRghI" Ids="FtXfbVYKYMrPIrh1yTEpjf,INM4TTX8Zk3PqoYace22f1" />
+        <Link Id="PrEWkE3pTBZMiwOofMSMR6" Ids="TBWDbV9DwRWLjKWV1qBm7f,NYz9kqq1X4iQI7ALBnxm5b" />
+        <Link Id="TI03uZOUj8QOa81ZH5s8VD" Ids="OHVPldPF2zrLsc5SP22Fce,PmEGXr4z5hlPrQi8soUvcl" />
       </Patch>
     </Node>
   </Patch>
