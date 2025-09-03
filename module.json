@@ -3,7 +3,7 @@
     "type":"WebSocket Client",
     "path":"Software",
     "version":"1.0.0",
-    "description":"WebSocket client for Webdis, a Redis HTTP interface.",
+    "description":"WebSocket client for Webdis, a Redis HTTP interface",
     "url":"",
     "downloadURL":"",
     "hasInput":true,
@@ -26,10 +26,10 @@
             "menu":"",
             "callback":"publishJSON",
             "parameters":{
-                "key":{
+                "Key":{
                     "type":"String"
                 },
-                "message":{
+                "Message":{
                     "type":"String"
                 }
             }
@@ -38,10 +38,10 @@
             "menu":"",
             "callback":"publishJSON",
             "parameters":{
-                "key":{
+                "Key":{
                     "type":"String"
                 },
-                "message":{
+                "Message":{
                     "type":"Float"
                 }
             }
@@ -50,7 +50,7 @@
             "menu":"",
             "callback":"subscribe",
             "parameters":{
-                "key":{
+                "Key":{
                     "type":"String"
                 }
             }
@@ -59,7 +59,31 @@
             "menu":"",
             "callback":"unsubscribe",
             "parameters":{
-                "key":{
+                "Key":{
+                    "type":"String"
+                }
+            }
+        },
+        "Set Float":{
+            "menu":"",
+            "callback":"setJSON",
+            "parameters":{
+                "Key":{
+                    "type":"String"
+                },
+                "Value":{
+                    "type":"Float"
+                }
+            }
+        },
+        "Set String":{
+            "menu":"",
+            "callback":"setJSON",
+            "parameters":{
+                "Key":{
+                    "type":"String"
+                },
+                "Value":{
                     "type":"String"
                 }
             }

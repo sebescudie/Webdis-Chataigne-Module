@@ -3,6 +3,11 @@ function publishJSON(key, value) {
     local.send(JSON.stringify(publishArray));
 }
 
+function setJSON(key, value){
+    var setArray = ["SET", key, JSON.stringify(value)];
+    local.send(JSON.stringify(setArray));
+}
+
 function subscribe(key){
     var subscribeArray = ["SUBSCRIBE", key];
     local.send(JSON.stringify(subscribeArray));
