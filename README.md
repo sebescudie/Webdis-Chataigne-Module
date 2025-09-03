@@ -4,4 +4,5 @@ A little Châtaigne WebSocket module that allows to PUB/SUB values to Redis via 
 
 ## Features
 
-- Publish/subscribe floats and string
+- `PUB`/`SUB` floats and strings
+- `SET` floats and strings
