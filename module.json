@@ -10,11 +10,16 @@
     "hasOutput":true,
     "hideDefaultCommands":true,
     "hideDefaultParameters":[
-        "autoAdd"
+        "autoAdd",
+        "protocol",
+        "messageStructure",
+        "customSeparator",
+        "firstValueIsTheName"
     ],
     "defaults":{
         "serverPath":"127.0.0.1:7379",
-        "autoAdd":false
+        "autoAdd":false,
+        "protocol":"JSON"
     },
     "parameters":{},
     "values":{},
@@ -22,8 +27,8 @@
         "Webdis.js"
     ],
     "commands":{
-        "Publish string":{
-            "menu":"",
+        "Publish String":{
+            "menu":"Publish",
             "callback":"publishJSON",
             "parameters":{
                 "Key":{
@@ -34,8 +39,8 @@
                 }
             }
         },
-        "Publish float":{
-            "menu":"",
+        "Publish Float":{
+            "menu":"Publish",
             "callback":"publishJSON",
             "parameters":{
                 "Key":{
@@ -65,7 +70,7 @@
             }
         },
         "Set Float":{
-            "menu":"",
+            "menu":"Set",
             "callback":"setJSON",
             "parameters":{
                 "Key":{
@@ -77,7 +82,7 @@
             }
         },
         "Set String":{
-            "menu":"",
+            "menu":"Set",
             "callback":"setJSON",
             "parameters":{
                 "Key":{
